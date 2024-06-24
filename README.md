@@ -1,5 +1,3 @@
-# Rock-Paper-Scissors
-
 # Rock, Paper, Scissors Game
 
 This is a console application that allows a player to play Rock, Paper, Scissors against an AI opponent.
