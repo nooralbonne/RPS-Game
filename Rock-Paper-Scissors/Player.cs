@@ -15,7 +15,7 @@ namespace Rock_Paper_Scissors
         {
             Name = name;
             Score = 0;
-        }
+        }//
 
         public string ChooseMove()
         {
