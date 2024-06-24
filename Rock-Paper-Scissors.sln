@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPSGame", "Rock-Paper-Scissors\RPSGame.csproj", "{322758FC-48F9-48E1-9EC5-FDB4B75A2C5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPSGameTests", "RPSGameTests\RPSGameTests.csproj", "{FC9BF8EE-9354-49E9-BCF3-FA9C3C157C86}"
+	ProjectSection(ProjectDependencies) = postProject
+		{322758FC-48F9-48E1-9EC5-FDB4B75A2C5E} = {322758FC-48F9-48E1-9EC5-FDB4B75A2C5E}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{322758FC-48F9-48E1-9EC5-FDB4B75A2C5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{322758FC-48F9-48E1-9EC5-FDB4B75A2C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{322758FC-48F9-48E1-9EC5-FDB4B75A2C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{322758FC-48F9-48E1-9EC5-FDB4B75A2C5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC9BF8EE-9354-49E9-BCF3-FA9C3C157C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC9BF8EE-9354-49E9-BCF3-FA9C3C157C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC9BF8EE-9354-49E9-BCF3-FA9C3C157C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC9BF8EE-9354-49E9-BCF3-FA9C3C157C86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AEAF01C3-DB29-466E-909C-7DDF05650B66}
+	EndGlobalSection
+EndGlobal
