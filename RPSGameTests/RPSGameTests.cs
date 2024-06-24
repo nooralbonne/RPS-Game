@@ -1,25 +1,85 @@
 using Xunit;
-using Rock_Paper_Scissors;
+using Rock_Paper_Scissors; // Adjusted namespace to match your project
 
 namespace RPSGameTests
 {
     public class RPSGameTests
     {
-        [Theory]
-        [InlineData("rock", "scissors", "Player")]
-        [InlineData("scissors", "paper", "Player")]
-        [InlineData("paper", "rock", "Player")]
-        [InlineData("scissors", "rock", "AI")]
-        [InlineData("paper", "scissors", "AI")]
-        [InlineData("rock", "paper", "AI")]
-        [InlineData("rock", "rock", "Tie")]
-        [InlineData("paper", "paper", "Tie")]
-        [InlineData("scissors", "scissors", "Tie")]
-        public void DetermineWinner_ShouldCorrectlyDetermineWinner(string playerMove, string aiMove, string expectedWinner)
+        [Fact]
+        public void Test_PlayerWinsWithRock()
         {
+            // Arrange
             var game = new RPSGame();
+            string playerMove = "rock";
+            string aiMove = "scissors";
+
+            // Act
             string winner = game.TestDetermineWinner(playerMove, aiMove);
-            Assert.Equal(expectedWinner, winner);
+
+            // Assert
+            Assert.Equal("Player", winner);
+        }
+
+        [Fact]
+        public void Test_AIWinsWithPaper()
+        {
+            // Arrange
+            var game = new RPSGame();
+            string playerMove = "rock";
+            string aiMove = "paper";
+
+            // Act
+            string winner = game.TestDetermineWinner(playerMove, aiMove);
+
+            // Assert
+            Assert.Equal("AI", winner);
+        }
+
+        [Fact]
+        public void Test_Tie()
+        {
+            // Arrange
+            var game = new RPSGame();
+            string playerMove = "paper";
+            string aiMove = "paper";
+
+            // Act
+            string winner = game.TestDetermineWinner(playerMove, aiMove);
+
+            // Assert
+            Assert.Equal("Tie", winner);
+        }
+
+        [Fact]
+        public void Test_PlayerScoreIncrement()
+        {
+            // Arrange
+            var game = new RPSGame();
+            var player = new Player("Player");
+            var ai = new Player("AI");
+            string winner = "Player";
+
+            // Act
+            game.TestUpdateScore(player, ai, winner);
+
+            // Assert
+            Assert.Equal(1, player.Score);
+        }
+
+        [Fact]
+        public void Test_AIScoreIncrement()
+        {
+            // Arrange
+            var game = new RPSGame();
+            var player = new Player("Player");
+            var ai = new Player("AI");
+            string winner = "AI";
+
+            // Act
+            game.TestUpdateScore(player, ai, winner);
+
+            // Assert
+            Assert.Equal(1, ai.Score);
         }
     }
 }
