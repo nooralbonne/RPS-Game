@@ -81,5 +81,6 @@ namespace RPSGameTests
             // Assert
             Assert.Equal(1, ai.Score);
         }
+        //
     }
 }
